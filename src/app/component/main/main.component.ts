@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
   [x:string]: any;
 
-  constructor(private routes: Router) { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   newClass(current:string){
 
     this.Currentnav = current;
-    this.routes.navigateByUrl('/main');
+    this.route.navigateByUrl('/main');
   }
 
 }

@@ -11,19 +11,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import{MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { AboutComponent } from './component/about/about.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
-const routes: Routes= [
-  {path: 'main', component: MainComponent,
-    children: [
-      {path: 'weather', component: WeatherComponent},
-      {path: 'hazardmap', component: HazardmapComponent},
-      {path: 'about', component: AboutComponent},
-    ],
-  },
-  {path: '', redirectTo: '/main', pathMatch: 'full'}
 
-];
 
 @NgModule({
   declarations: [
@@ -36,11 +27,11 @@ const routes: Routes= [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

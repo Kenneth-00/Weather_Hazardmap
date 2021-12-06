@@ -28,4 +28,8 @@ a{
 }
 mat-toolbar{
     background-color: rgb(23, 23, 153);
+    font-size: 25px;
+}
+.pages_display{
+    margin: auto auto;
 }

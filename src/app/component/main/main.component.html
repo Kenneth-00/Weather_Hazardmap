@@ -4,9 +4,9 @@
             {{Currentnav}}
         </div>
         <div class="anchor_class">
-            <a mat-button routerLink="weather" (click)="newClass('Weather Update')" routerLinkActive="active">Weather Update</a>
-            <a mat-button routerLink="hazardmap" (click)="newClass('Hazard Map')" routerLinkActive="active">Hazard Map</a>
-            <a mat-button routerLink="about" (click)="newClass('About Us')" routerLinkActive="active">About Us</a>
+            <a href="#" mat-button routerLink="/weather" (click)="newClass('Weather Update')" routerLinkActive="active">Weather Update</a>
+            <a mat-button routerLink="/hazardmap" (click)="newClass('Hazard Map')" routerLinkActive="active">Hazard Map</a>
+            <a mat-button routerLink="/about" (click)="newClass('About Us')" routerLinkActive="active">About Us</a>
         </div>
         
     </mat-toolbar>
@@ -15,5 +15,7 @@
             <p>Hello! <br> This website is an application of the owner's knowlegde on angular and git. <br> Thank You. And God bless!</p>
         </div>
     </div>
-    <router-outlet></router-outlet>
+    <div class="pages_display">
+        <router-outlet></router-outlet>
+    </div>
 </div>
