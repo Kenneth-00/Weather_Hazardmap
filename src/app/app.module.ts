@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './component/weather/weather.component';
 import { HazardmapComponent } from './component/hazardmap/hazardmap.component';
+import { MainComponent } from './component/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
-    HazardmapComponent
+    HazardmapComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
