@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   newClass(current:string){
 
     this.Currentnav = current;
-    this.routes.navigateByUrl('/main')
+    this.routes.navigateByUrl('/main');
   }
 
 }

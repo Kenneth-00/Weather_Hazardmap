@@ -14,13 +14,16 @@ import { AboutComponent } from './component/about/about.component';
 
 
 const routes: Routes= [
-  {path: 'main', component: MainComponent},
-  {path: 'weather', component: WeatherComponent},
-  {path: 'hazardmap', component: HazardmapComponent},
-  {path: 'about', component: AboutComponent},
+  {path: 'main', component: MainComponent,
+    children: [
+      {path: 'weather', component: WeatherComponent},
+      {path: 'hazardmap', component: HazardmapComponent},
+      {path: 'about', component: AboutComponent},
+    ],
+  },
   {path: '', redirectTo: '/main', pathMatch: 'full'}
 
-]
+];
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ const routes: Routes= [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
