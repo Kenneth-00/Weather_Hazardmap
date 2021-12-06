@@ -6,6 +6,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './component/weather/weather.component';
 import { HazardmapComponent } from './component/hazardmap/hazardmap.component';
 import { MainComponent } from './component/main/main.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const routes: Routes= [
+  {path: 'main', component: MainComponent,
+    children: [
+      {
+        path: 'weather', component: WeatherComponent
+      },
+      {
+        path: 'hazardmap', component: HazardmapComponent
+      }
+    ]
+  },
+  {path: '', redirectTo: '/main', pathMatch: 'full'}
+
+]
 
 @NgModule({
   declarations: [
@@ -16,7 +33,8 @@ import { MainComponent } from './component/main/main.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
