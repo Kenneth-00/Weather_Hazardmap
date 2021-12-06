@@ -7,19 +7,15 @@ import { WeatherComponent } from './component/weather/weather.component';
 import { HazardmapComponent } from './component/hazardmap/hazardmap.component';
 import { MainComponent } from './component/main/main.component';
 import { RouterModule, Routes } from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import{MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 
 const routes: Routes= [
-  {path: 'main', component: MainComponent,
-    children: [
-      {
-        path: 'weather', component: WeatherComponent
-      },
-      {
-        path: 'hazardmap', component: HazardmapComponent
-      }
-    ]
-  },
+  {path: 'main', component: MainComponent},
+  {path: 'weather', component: WeatherComponent},
+  {path: 'hazardmap', component: HazardmapComponent},
   {path: '', redirectTo: '/main', pathMatch: 'full'}
 
 ]
@@ -34,6 +30,9 @@ const routes: Routes= [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
