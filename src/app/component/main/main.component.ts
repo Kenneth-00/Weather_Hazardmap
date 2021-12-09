@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,16 +8,11 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
   [x:string]: any;
 
-  constructor(private route: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  Currentnav: string = 'Home';
-  newClass(current:string){
-
-    this.Currentnav = current;
-    this.route.navigateByUrl('/main');
-  }
+  
 
 }

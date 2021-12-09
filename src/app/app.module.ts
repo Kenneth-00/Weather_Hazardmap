@@ -12,6 +12,8 @@ import{MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { AboutComponent } from './component/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './component/main/header/header.component';
+import { FooterComponent } from './component/main/footer/footer.component';
 
 
 
@@ -22,7 +24,9 @@ import { AppRoutingModule } from './app-routing.module';
     MainComponent,
     WeatherComponent,
     HazardmapComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

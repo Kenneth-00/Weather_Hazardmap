@@ -1,22 +1,3 @@
-<mat-toolbar>
-    <div class="custom-toolbar">
-        {{Currentnav}}
-    </div>
-    <div class="anchor_class">
-        <a mat-button routerLink="/main" (click)="newClass('Home')" routerLinkActive="active">Home</a>
-        <a mat-button routerLink="/weather" (click)="newClass('Weather Update')" routerLinkActive="active">Weather Update</a>
-        <a mat-button routerLink="/hazardmap" (click)="newClass('Hazard Map')" routerLinkActive="active">Hazard Map</a>
-        <a mat-button routerLink="/about" (click)="newClass('About Us')" routerLinkActive="active">About Us</a>
-    </div>
-    
-</mat-toolbar>
-<div class="app-conatiner">
-    
-    <div *ngIf = "Currentnav == 'Home'">
-        <div class="homepara">
-            <p>Hello! <br> This website is an application of the owner's knowlegde on angular and git. <br> Thank You. And God bless!</p>
-        </div>
-        <router-outlet></router-outlet>
-    </div>
-   
-</div>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
