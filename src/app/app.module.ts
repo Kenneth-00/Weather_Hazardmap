@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './component/weather/weather.component';
 import { HazardmapComponent } from './component/hazardmap/hazardmap.component';
 import { MainComponent } from './component/main/main.component';
@@ -19,18 +19,19 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
     WeatherComponent,
     HazardmapComponent,
-    MainComponent,
     AboutComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NoopAnimationsModule,
+    AppRoutingModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    AppRoutingModule
     
   ],
   providers: [],
